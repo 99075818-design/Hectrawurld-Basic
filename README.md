@@ -1,8 +1,6 @@
 # How to Run
-1. Install MSYS2 MINGW
-2. Download this repository
-3. Open the folder
-4. Open the application called Game
+1. Download this .exe file
+2. Open the application
 
 # How to Play
 1. WASD to move (No Arrow Keys Yet)
