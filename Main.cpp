@@ -45,14 +45,15 @@ int main() {
         render(player, coins, gameExit, gameMap);
 
         char input = _getch();
+        char key = std::tolower(input);
         int nextX = player.x;
         int nextY = player.y;
 
-        if (input == 'w') nextY--;
-        else if (input == 's') nextY++;
-        else if (input == 'a') nextX--;
-        else if (input == 'd') nextX++;
-        else if (input == 'q') break;
+        if (key == 'w') nextY--;
+        else if (key == 's') nextY++;
+        else if (key == 'a') nextX--;
+        else if (key == 'd') nextX++;
+        else if (key == 'q') break;
 
         if (gameMap.isWalkable(nextX, nextY)) {
             player.x = nextX;
@@ -69,14 +70,18 @@ int main() {
         if (player.x == gameExit.x && player.y == gameExit.y) {
             render(player, coins, gameExit, gameMap);
             
-            std::cout << "\n================================" << std::endl;
+            std::cout << "\n===================================" << std::endl;
             std::cout << "YOU ESCAPED! Final Score: " << player.coins << " coins." << std::endl;
 
             if (player.coins == 5) {
                 std::cout << "PERFECT SCORE!!!" << std::endl;
             }
+
+            else if (player.coins < 5) {
+                std::cout << "You Can Do Better!" << std::endl;
+            }
             
-            std::cout << "================================" << std::endl;
+            std::cout << "===================================" << std::endl;
             std::cout << "\nPress any key to close the game..." << std::endl;
 
             _getch();
