@@ -1,7 +1,6 @@
 # How to Run
-1. Download the GameDownload folder
-2. Open the application
-3. You can pin the shortcut to look like an app
+1. Download the .exe file
+2. Launch the application
 
 # How to Play
 1. WASD to move (No Arrow Keys Yet)
